@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  periode: 2014-05-24
+  lieu: MyString
+  recit: MyText
+  personne_id: 1
+  chapitre_id: 1
+  numero: 1
+
+two:
+  periode: 2014-05-24
+  lieu: MyString
+  recit: MyText
+  personne_id: 1
+  chapitre_id: 1
+  numero: 1

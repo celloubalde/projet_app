@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sujet: MyString
+  theme: MyString
+  texte: MyText
+  chapitre_id: 1
+
+two:
+  sujet: MyString
+  theme: MyString
+  texte: MyText
+  chapitre_id: 1

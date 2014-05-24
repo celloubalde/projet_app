@@ -1,0 +1,33 @@
+<%= form_for(@anecdote) do |f| %>
+  <% if @anecdote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anecdote.errors.count, "error") %> prohibited this anecdote from being saved:</h2>
+
+      <ul>
+      <% @anecdote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sujet %><br>
+    <%= f.text_field :sujet %>
+  </div>
+  <div class="field">
+    <%= f.label :theme %><br>
+    <%= f.text_field :theme %>
+  </div>
+  <div class="field">
+    <%= f.label :texte %><br>
+    <%= f.text_area :texte %>
+  </div>
+  <div class="field">
+    <%= f.label :chapitre_id %><br>
+    <%= f.number_field :chapitre_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Periode:</strong>
+  <%= @scene.periode %>
+</p>
+
+<p>
+  <strong>Lieu:</strong>
+  <%= @scene.lieu %>
+</p>
+
+<p>
+  <strong>Recit:</strong>
+  <%= @scene.recit %>
+</p>
+
+<p>
+  <strong>Personne:</strong>
+  <%= @scene.personne_id %>
+</p>
+
+<p>
+  <strong>Chapitre:</strong>
+  <%= @scene.chapitre_id %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @scene.numero %>
+</p>
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>
