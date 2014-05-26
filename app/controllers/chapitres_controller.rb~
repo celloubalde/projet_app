@@ -10,6 +10,7 @@ class ChapitresController < ApplicationController
   # GET /chapitres/1
   # GET /chapitres/1.json
   def show
+	@chapitre = Chapitre.find(params[:id])
   end
 
   # GET /chapitres/new
@@ -26,45 +27,41 @@ class ChapitresController < ApplicationController
   def create
     @chapitre = Chapitre.new(chapitre_params)
 
-    respond_to do |format|
+    
       if @chapitre.save
-        format.html { redirect_to @chapitre, notice: 'Chapitre was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @chapitre }
+        redirect_to @chapitre
       else
-        format.html { render action: 'new' }
-        format.json { render json: @chapitre.errors, status: :unprocessable_entity }
+        render 'new'
       end
-    end
+    
   end
 
   # PATCH/PUT /chapitres/1
   # PATCH/PUT /chapitres/1.json
   def update
-    respond_to do |format|
+   
       if @chapitre.update(chapitre_params)
-        format.html { redirect_to @chapitre, notice: 'Chapitre was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to @chapitre
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @chapitre.errors, status: :unprocessable_entity }
+       render 'edit'
       end
-    end
+    
   end
 
   # DELETE /chapitres/1
   # DELETE /chapitres/1.json
   def destroy
+    @chapitre = Chapitre.find(params[:id])
     @chapitre.destroy
-    respond_to do |format|
-      format.html { redirect_to chapitres_url }
-      format.json { head :no_content }
-    end
+    redirect_to chapitres_path
+    
+   
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chapitre
-      @chapitre = Chapitre.find(params[:id])
+      @chapitre = Chapitre.find(params[chapitre])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

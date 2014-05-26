@@ -10,6 +10,7 @@ class ChapitresController < ApplicationController
   # GET /chapitres/1
   # GET /chapitres/1.json
   def show
+	@chapitre = Chapitre.find(params[:id])
   end
 
   # GET /chapitres/new

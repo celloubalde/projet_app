@@ -1,12 +1,27 @@
 ProjetApp::Application.routes.draw do
+  #match '/home', :to => 'pages#home'
+  #match '/about',   :to => 'pages#about'
+  #match '/contact',    :to => 'pages#contact'
+  get 'home' => 'pages#home' , as: 'home'
+  get 'about' => 'pages#about' , as: 'about'
+  get 'home' => 'pages#contact' , as: 'contact'
+  #get "pages/home"
+  #get "pages/contact"
+  #get "pages/about" 
+  
+
   resources :anecdotes
 
   resources :personnes
 
   resources :scenes
 
-  resources :chapitres
-
+  resources :chapitres 
+	
+ 
+  
+  root to: 'pages#home'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
