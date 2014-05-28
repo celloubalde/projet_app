@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: personnes
+#
+#  id         :integer          not null, primary key
+#  nom        :string(255)
+#  prenom     :string(255)
+#  numero     :integer
+#  scene_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

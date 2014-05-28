@@ -1,4 +1,4 @@
-<h1>Listing scenes</h1>
+<h1>Liste des scenes</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= scene.personne_id %></td>
         <td><%= scene.chapitre_id %></td>
         <td><%= scene.numero %></td>
-        <td><%= link_to 'Show', scene %></td>
-        <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
-        <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', scene %></td>
+        <td><%= link_to 'Modifier', edit_scene_path(scene) %></td>
+        
       </tr>
     <% end %>
   </tbody>

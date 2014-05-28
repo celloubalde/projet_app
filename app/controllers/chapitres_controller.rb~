@@ -16,6 +16,7 @@ class ChapitresController < ApplicationController
   # GET /chapitres/new
   def new
     @chapitre = Chapitre.new
+    @titre = "Creation"
   end
 
   # GET /chapitres/1/edit
@@ -50,6 +51,13 @@ class ChapitresController < ApplicationController
 
   # DELETE /chapitres/1
   # DELETE /chapitres/1.json
+
+   def delete     
+      @chapitre = chapitre.find(params[:id])
+      render 'delete'
+   end
+
+
   def destroy
     @chapitre = Chapitre.find(params[:id])
     @chapitre.destroy
@@ -61,7 +69,7 @@ class ChapitresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chapitre
-      @chapitre = Chapitre.find(params[chapitre])
+      @chapitre = Chapitre.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

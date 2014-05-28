@@ -1,4 +1,4 @@
-<h1>Listing chapitres</h1>
+<h1>Liste des chapitres</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= chapitre.numero %></td>
         <td><%= chapitre.titre %></td>
-        <td><%= link_to 'Show', chapitre %></td>
-        <td><%= link_to 'Edit', edit_chapitre_path(chapitre) %></td>
-        <td><%= link_to 'Destroy', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', chapitre %></td>
+        <td><%= link_to 'Modifier', edit_chapitre_path(chapitre) %></td>
+        
       </tr>
     <% end %>
   </tbody>

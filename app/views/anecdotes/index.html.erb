@@ -1,4 +1,4 @@
-<h1>Listing anecdotes</h1>
+<h1>Liste des annecdotes</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= anecdote.theme %></td>
         <td><%= anecdote.texte %></td>
         <td><%= anecdote.chapitre_id %></td>
-        <td><%= link_to 'Show', anecdote %></td>
-        <td><%= link_to 'Edit', edit_anecdote_path(anecdote) %></td>
-        <td><%= link_to 'Destroy', anecdote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', anecdote %></td>
+        <td><%= link_to 'Modifier', edit_anecdote_path(anecdote) %></td>
+        
       </tr>
     <% end %>
   </tbody>

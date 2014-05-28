@@ -7,6 +7,7 @@ gem 'rails', '4.0.5'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
+  
 end
 
 group :test do
@@ -45,6 +46,10 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'annotate', '2.5.0', group: :development
+gem 'protected_attributes'
+gem 'bcrypt'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

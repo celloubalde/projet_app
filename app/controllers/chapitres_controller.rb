@@ -16,6 +16,7 @@ class ChapitresController < ApplicationController
   # GET /chapitres/new
   def new
     @chapitre = Chapitre.new
+    @titre = "Creation"
   end
 
   # GET /chapitres/1/edit
@@ -31,6 +32,7 @@ class ChapitresController < ApplicationController
       if @chapitre.save
         redirect_to @chapitre
       else
+	@titre = "Creation"
         render 'new'
       end
     
@@ -50,6 +52,13 @@ class ChapitresController < ApplicationController
 
   # DELETE /chapitres/1
   # DELETE /chapitres/1.json
+
+   def delete     
+      @chapitre = chapitre.find(params[:id])
+      render 'delete'
+   end
+
+
   def destroy
     @chapitre = Chapitre.find(params[:id])
     @chapitre.destroy

@@ -1,4 +1,4 @@
-<h1>Listing personnes</h1>
+<h1>Listes des personnes</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= personne.prenom %></td>
         <td><%= personne.numero %></td>
         <td><%= personne.scene_id %></td>
-        <td><%= link_to 'Show', personne %></td>
-        <td><%= link_to 'Edit', edit_personne_path(personne) %></td>
-        <td><%= link_to 'Destroy', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', personne %></td>
+        <td><%= link_to 'Modifier', edit_personne_path(personne) %></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Personne', new_personne_path %>
+<%= link_to 'Ajouter une Personne', new_personne_path %>

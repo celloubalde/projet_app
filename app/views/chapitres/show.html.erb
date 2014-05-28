@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<table class="chapitre">
 
-<p>
-  <strong>Numero:</strong>
-  <%= @chapitre.numero %>
-</p>
+  <tr>
+     <td class="main">
 
-<p>
-  <strong>Titre:</strong>
-  <%= @chapitre.titre %>
-</p>
+       <% unless @chapitre.scenes.empty? %>
+  	 <table class="scene" summary="Les Scenes du chapitre">
+		
+	 </table>
+	
+       <% end %>
 
-<%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |
-<%= link_to 'Back', chapitres_path %>
+	
+  	 <table class="personne" summary="Les perssonages lie au chapitre">
+		
+	 </table>
+	
+       
+      </td>
+      <td class="sidebar round">
+	<strong>Titre</strong> <%= @chapitre.titre %><br />
+	<strong>URL</strong> <%= link_to chapitre_path(@chapitre), @chapitre %><br />
+	<strong>Scenes</strong> <%= @chapitre.scenes.count %>
+	
+	</td>
+  </tr>
+</table>
+
+

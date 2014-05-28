@@ -1,0 +1,4 @@
+<%= form_for(:chapitre, :url => {:action => 'destroy', :id => @chapitre.numero }) do |f| %> 
+     <p>Are you sure you want to remove "<%= @chapitre.titre %>"</p>
+     <%= submit_tag ("Yes, I am sure")
+<% end %>

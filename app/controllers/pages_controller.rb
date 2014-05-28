@@ -14,4 +14,8 @@ class PagesController < ApplicationController
   def chapitre
 	@titre = "Chapitres"
   end
+
+  def aide
+	@titre = "Aide"
+  end
 end
