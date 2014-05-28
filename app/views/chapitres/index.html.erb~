@@ -1,0 +1,30 @@
+<h1>Liste des chapitres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th>Titre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chapitres.each do |chapitre| %>
+      <tr>
+        <td><%= chapitre.numero %></td>
+        <td><%= chapitre.titre %></td>
+        <td><%= link_to 'Voir', chapitre %></td>
+        <td><%= link_to 'Modifier', edit_chapitre_path(chapitre) %></td>
+        <td><%= link_to 'Supprimer',chapitre, :method => :delete, :confirm => 'Etes vous sure' ,
+						:title => "Supprimer #{chapitre.titre}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chapitre', new_chapitre_path %>

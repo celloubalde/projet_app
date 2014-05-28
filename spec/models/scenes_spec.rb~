@@ -1,0 +1,11 @@
+require 'spec_helper'
+
+describe Scene do
+  before(:each) do
+	@attr = { :numero => -1, :lieu => "examplelieu", :periode => "0000-00-00", :chapitre_id => -1, :personne_id => -1 }
+  end
+
+  it "devrait creer une nouvelle instance dotee des attributs valides" do
+	Scene.create!(@attr)
+  end
+end

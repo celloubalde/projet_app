@@ -1,0 +1,33 @@
+<h1>Listes des personnes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Numero</th>
+      <th>Scene</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personnes.each do |personne| %>
+      <tr>
+        <td><%= personne.nom %></td>
+        <td><%= personne.prenom %></td>
+        <td><%= personne.numero %></td>
+        <td><%= personne.scene_id %></td>
+        <td><%= link_to 'Voir', personne %></td>
+        <td><%= link_to 'Modifier', edit_personne_path(personne) %></td>
+        <td><%= link_to 'Supprimer', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ajouter une Personne', new_personne_path %>

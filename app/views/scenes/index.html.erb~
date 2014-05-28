@@ -1,0 +1,37 @@
+<h1>Liste des scenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Periode</th>
+      <th>Lieu</th>
+      <th>Recit</th>
+      <th>Personne</th>
+      <th>Chapitre</th>
+      <th>Numero</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scenes.each do |scene| %>
+      <tr>
+        <td><%= scene.periode %></td>
+        <td><%= scene.lieu %></td>
+        <td><%= scene.recit %></td>
+        <td><%= scene.personne_id %></td>
+        <td><%= scene.chapitre_id %></td>
+        <td><%= scene.numero %></td>
+        <td><%= link_to 'Voir', scene %></td>
+        <td><%= link_to 'Modifier', edit_scene_path(scene) %></td>
+        <td><%= link_to 'Supprimer', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scene', new_scene_path %>

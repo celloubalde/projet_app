@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Application d'une librairie</title>
+  </head>
+  <body>
+    <h1>Librairie</h1>
+    <p>
+      Ceci est la page d'accueil de l'Application 
+    </p>
+   
+   
+   <%= link_to "Creer un Chapitre", '/chapitres/new', :class => "creer_button round" %>
+   <%= link_to "Ajouter Une Personne", '/personnes/new', :class => "ajouter_button round" %>
+   <%= link_to "Ajouter Une Scene", '/scenes/new', :class => "ajouter_button round" %>
+   <%= link_to "Ajouter Une Annecdote", '/annecdotes/new', :class => "ajouter_button round" %>
+   
+  
+  </body>
+</html>
+ 

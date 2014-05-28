@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Application d'une librairie |  <%= @titre %></title>
+  </head>
+  <body>
+    <h1>Aide</h1>
+    <p> Creation d'un chapitre
+	<li>Pour creer un chapitre vous etes obliger de remplir tous les champs</li>
+	<li>Vous n'etes pas autoriser a mettre un numero deja existant ou un titre de longueur > 30</li>
+    </p>
+    <p> Creation d'un Personnage
+	<li>Pour creer un Personnage vous n'etes pas obliger de remplir scene </li>
+	<li>Vous n'etes pas autoriser a mettre un numero deja existant ou de saisir un nom,un prenom de longueur > 30</li>
+    </p>
+    <p> Creation d'une Scene
+	<li>Pour creer une scene vous etes obliger de remplir tous les champs a l'exception de recit</li>
+	<li>Vous n'etes pas autoriser a mettre un numero deja existant ou de saisir un lieu de longueur > 30</li>
+    </p>
+    <p> Creation d'une Annecdotes
+	<li>Pour creer une annecdotes vous etes obliger de remplir tous les champs execpte texte</li>
+	<li>Vous n'etes pas autoriser a saisir un sujet de longueur > 30</li>
+    </p>
+  </body>
+</html>
+

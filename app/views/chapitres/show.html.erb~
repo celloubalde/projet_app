@@ -1,0 +1,29 @@
+<table class="chapitre">
+
+  <tr>
+     <td class="main">
+
+       <% unless @chapitre.scenes.empty? %>
+  	 <table class="scene" summary="Les Scenes du chapitre">
+		
+	 </table>
+	
+       <% end %>
+
+	
+  	 <table class="personne" summary="Les perssonages lie au chapitre">
+		
+	 </table>
+	
+       
+      </td>
+      <td class="sidebar round">
+	<strong>Titre</strong> <%= @chapitre.titre %><br />
+	<strong>URL</strong> <%= link_to chapitre_path(@chapitre), @chapitre %><br />
+	<strong>Scenes</strong> <%= @chapitre.scenes.count %>
+	<strong>Personnage</strong> <%= @chapitre.personnes.count %>
+	</td>
+  </tr>
+</table>
+
+

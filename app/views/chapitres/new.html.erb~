@@ -1,0 +1,15 @@
+<h1>New chapitre</h1>
+
+<%= form_for(@chapitre) do |f| %>
+  <div class="field">
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :titre %><br />
+    <%= f.text_field :titre %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Creation" %>
+  </div>
+<% end %>

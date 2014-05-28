@@ -1,0 +1,53 @@
+require 'spec_helper'
+
+describe ChapitreController do
+	render_views
+
+ describe "GET 'new'" do
+
+    it "devrait reussir" do
+      get :new
+      response.should be_success
+    end
+  end
+
+  describe "POST 'create'" do
+
+    describe "echec" do
+
+      before(:each) do
+        @attr = { :numero => "", :titre => ""}
+      end
+
+      it "ne devrait pas creer le chapitre" do
+        lambda do
+          post :create, :chapitre => @attr
+        end.should_not change(Chapitre, :count)
+      end
+
+     
+
+      it "devrait rendre la page 'new'" do
+        post :create, :chapitre => @attr
+        response.should render_template('new')
+      end
+    end
+    describe "succes" do
+
+      before(:each) do
+        @attr = { :numero => "NewChapitre", :titre => "exempletitre"}
+      end
+
+      it "devrait creer un chapitre" do
+        lambda do
+          post :create, :chapitre => @attr
+        end.should change(Chapitre, :count).by(1)
+      end
+
+      it "devrait rediriger vers la page d'affichage du chapitre" do
+        post :create, :chapitre => @attr
+        response.should redirect_to(user_path(assigns(:chapitre)))
+      end    
+    end
+ end
+end
